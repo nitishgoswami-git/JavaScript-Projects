@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+    width: 250px;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Display */
+.display {
+    width: 93%;
+    height: 60px;
+    background: black;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button Styles */
+.btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Different Button Colors */
+.gray {
+    background: #888;
+    color: white;
+}
+
+.dark {
+    background: #333;
+    color: white;
+}
+
+.red {
+    background: #b71c1c;
+    color: white;
+}
+
+/* Wide Zero Button */
+.wide {
+    grid-column: span 2;
+    width: 110px;
+    border-radius: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display"></div>
+        <div class="buttons">
+            <button class="btn gray">C</button>
+            <button class="btn gray">+/-</button>
+            <button class="btn gray">%</button>
+            <button class="btn red">/</button>
+            
+            <button class="btn dark">7</button>
+            <button class="btn dark">8</button>
+            <button class="btn dark">9</button>
+            <button class="btn red">*</button>
+            
+            <button class="btn dark">4</button>
+            <button class="btn dark">5</button>
+            <button class="btn dark">6</button>
+            <button class="btn red">-</button>
+            
+            <button class="btn dark">1</button>
+            <button class="btn dark">2</button>
+            <button class="btn dark">3</button>
+            <button class="btn red">+</button>
+            
+            <button class="btn dark wide">0</button>
+            <button class="btn dark">.</button>
+            <button class="btn red">=</button>
+        </div>
+    </div>
+</body>
+<script>
+    const display = document.querySelector('.display')
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click',()=>{
+            if (button.innerText === "="){
+                display.textContent = Function(`'use strict'; return (${display.textContent})`)();
+            }
+            else if (button.innerText == "C"){
+                display.innerHTML = ""
+            }
+            else{
+                display.innerHTML += button.innerText
+            }
+        });
+    });
+
+</script>
+</html>
