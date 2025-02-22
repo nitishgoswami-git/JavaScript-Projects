@@ -113,21 +113,5 @@ body {
         </div>
     </div>
 </body>
-<script>
-    const display = document.querySelector('.display')
-    document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click',()=>{
-            if (button.innerText === "="){
-                display.textContent = Function(`'use strict'; return (${display.textContent})`)();
-            }
-            else if (button.innerText == "C"){
-                display.innerHTML = ""
-            }
-            else{
-                display.innerHTML += button.innerText
-            }
-        });
-    });
-
-</script>
+<script src="Js/01_calculator.js"></script>
 </html>

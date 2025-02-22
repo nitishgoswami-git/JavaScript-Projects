@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8fc;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #12283a;
+}
+
+#count {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: green;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #e0e0e0;
+}
+
+button:focus {
+    outline: none;
+    border-color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <span id="count">0</span>
+        <div class="buttons">
+            <button id="decrease">DECREASE</button>
+            <button id="reset">RESET</button>
+            <button id="increase">INCREASE</button>
+        </div>
+    </div>
+    <script src="Js/03_counter.js"></script>
+</body>
+</html>
