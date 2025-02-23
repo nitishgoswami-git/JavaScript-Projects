@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.container {
+    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+}
+.container h4{
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top : 45%;
+    left: 45%;
+}
+.circle {
+    width: 70px;
+    position: absolute;
+    height: 70px;
+    
+    border-radius: 50%;
+  }
+    </style>
+</head>
+<body class="container">
+    <h4>Click anywhere to plot a circle</h4>
+    <!-- <div class="circle"></div> -->
+    <script src="Js/06_plotCircle.js"></script>
+</body>
+</html>
