@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag to Draw</title>
+    <style>
+        * {
+    user-select: none;  /* Prevents text selection */
+    -webkit-user-drag: none; /* Prevents dragging elements */
+}
+
+        /* Control Card */
+        .card {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 70px;
+            border-radius: 30px;
+            background: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, 
+                        rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+        }
+
+        /* Buttons inside card */
+        .card button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            background: #ff4f4f;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background: #ff3333;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            background-color: #313131;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+            background-size: 30px 30px;
+            background-position: -5px -5px;
+            z-index: -1; 
+        }
+        h6{
+            color: white;
+            font-size: 60px;
+            margin-top: 20%;
+            margin-left: 40%;
+            position: relative;
+            font-family: sans-serif;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="container">
+    <canvas id="drawCanvas"></canvas>
+    <div class="card">
+        <button id="undo">Undo</button>
+        <button id="clear">Clear</button>
+    </div>
+    <h6>Drag to Draw</h6>
+
+    <script src = "Js/11_drawApp.js"></script>
+</body>
+</html>
