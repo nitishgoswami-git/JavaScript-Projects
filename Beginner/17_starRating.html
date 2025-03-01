@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Star Rating</title>
+    <style>
+        body {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .emoji {
+            font-size: 40px;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .stars span {
+            font-size: 30px;
+            color: lightgray;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .stars span:hover,
+        .stars span.active {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="emoji"></div>
+        <div class="stars">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+    </div>
+<script src="Js/17_starRating.js"></script>
+</body>
+</html>
