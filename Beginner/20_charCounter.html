@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f47c6b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.counter-container {
+    background: #ffc0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 90%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 14px;
+}
+
+.count {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#char-count {
+    color: blue;
+}
+
+#remaining-count {
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="counter-container">
+        <h2>Real-time Character Counter</h2>
+        <textarea id="input-text" placeholder="Please write your text here..." maxlength="50"></textarea>
+        <div class="count">
+            <span>Total Characters: <span id="char-count">0</span></span>
+            <span>Remaining: <span id="remaining-count">50</span></span>
+        </div>
+    </div>
+
+    <script src="Js/20_charcounter.js"></script>
+
+</body>
+</html>
