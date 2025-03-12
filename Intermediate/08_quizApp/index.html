@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Time!</h1>
+        <span class="score">Score: <span id="score">0/10</span></span>
+
+        <div class="timer">
+            ⏳ <span id="timer">10s</span>
+        </div>
+        <!-- After 10Questions -->
+        <div class="gameOver" hidden>
+            <h1> Play Again </h1>
+        </div>
+
+       <!-- Quiz Section (hidden initially) -->
+        <div class="submit-section">
+            <button id="start-btn">Start</button>
+        </div>
+
+        <!-- Question Section -->
+        <div id="question-container">
+            <!-- Dynamically loaded question will appear here -->
+        </div>
+
+        <!-- Next Question Button -->
+        <div class="submit-section">
+
+            <button id="next-btn" hidden>Next Question</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
